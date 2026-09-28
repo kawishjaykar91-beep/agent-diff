@@ -1,0 +1,62 @@
+{
+  "version": "0.1",
+  "runId": "run-4da54bbe-da7b-46cd-8030-8b429d24014e",
+  "timestamp": "2026-09-26T18:17:24.043Z",
+  "agent": {
+    "name": "replayable-bot",
+    "version": "1.0.0"
+  },
+  "input": "What is the capital of France?",
+  "events": [
+    {
+      "id": "evt-74ad19c1-9c48-4ea9-a48f-66d63cfe3d0c",
+      "timestamp": "2026-09-26T18:17:24.044Z",
+      "type": "agent_start"
+    },
+    {
+      "id": "evt-b8d9ac81-b08b-4cd7-a303-7074a1c16b40",
+      "timestamp": "2026-09-26T18:17:24.046Z",
+      "type": "model_call",
+      "provider": "openai",
+      "model": "gpt-3.5-turbo",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the capital of France?"
+        }
+      ]
+    },
+    {
+      "id": "evt-913d0216-8b5a-4447-bb6d-a6bd181774e3",
+      "timestamp": "2026-09-26T18:17:24.046Z",
+      "type": "model_response",
+      "durationMs": 100,
+      "response": "The capital of France is Paris (mocked).",
+      "tokenUsage": {
+        "input": 10,
+        "output": 10,
+        "total": 20
+      }
+    },
+    {
+      "id": "evt-cccce498-2517-4317-b8e0-6143b5132564",
+      "timestamp": "2026-09-26T18:17:24.046Z",
+      "type": "agent_end",
+      "status": "success"
+    }
+  ],
+  "metadata": {},
+  "tokenUsage": {
+    "input": 10,
+    "output": 10,
+    "total": 20
+  },
+  "model": {
+    "provider": "openai",
+    "name": "gpt-3.5-turbo"
+  },
+  "result": {
+    "status": "success"
+  },
+  "durationMs": 3
+}

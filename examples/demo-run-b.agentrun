@@ -1,0 +1,62 @@
+{
+  "version": "0.1",
+  "runId": "run-129f6e78-1a95-4ba2-8290-efba7ffd028f",
+  "timestamp": "2026-09-26T18:18:18.033Z",
+  "agent": {
+    "name": "demo-bot",
+    "version": "1.0.0"
+  },
+  "input": "What is the capital of France, and what is its population?",
+  "events": [
+    {
+      "id": "evt-effbef96-6ac4-4b40-9164-1efd475f9657",
+      "timestamp": "2026-09-26T18:18:18.033Z",
+      "type": "agent_start"
+    },
+    {
+      "id": "evt-0b16f27c-bb47-4910-989c-03bb54bfe09c",
+      "timestamp": "2026-09-26T18:18:18.034Z",
+      "type": "model_call",
+      "provider": "openai",
+      "model": "gpt-4o",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the capital of France, and what is its population?"
+        }
+      ]
+    },
+    {
+      "id": "evt-102443ee-1f39-418d-a639-6db132c88bc2",
+      "timestamp": "2026-09-26T18:18:18.034Z",
+      "type": "model_response",
+      "durationMs": 0,
+      "response": "The capital of France is Paris. Its population is approximately 2.1 million.",
+      "tokenUsage": {
+        "input": 58,
+        "output": 76,
+        "total": 134
+      }
+    },
+    {
+      "id": "evt-0b2eb630-8f81-4b29-a13b-df23308ae4ba",
+      "timestamp": "2026-09-26T18:18:18.034Z",
+      "type": "agent_end",
+      "status": "success"
+    }
+  ],
+  "metadata": {},
+  "tokenUsage": {
+    "input": 58,
+    "output": 76,
+    "total": 134
+  },
+  "model": {
+    "provider": "openai",
+    "name": "gpt-4o"
+  },
+  "result": {
+    "status": "success"
+  },
+  "durationMs": 1
+}

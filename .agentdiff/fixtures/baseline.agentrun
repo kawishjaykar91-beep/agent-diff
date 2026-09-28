@@ -1,0 +1,115 @@
+{
+  "version": "0.1",
+  "runId": "run-4e0c752b-69bf-4605-b3e0-2c2ef0d65599",
+  "timestamp": "2026-09-26T18:18:26.668Z",
+  "agent": {
+    "name": "weather-agent",
+    "version": "1.0"
+  },
+  "input": "What is the weather in SF?",
+  "events": [
+    {
+      "id": "evt-ae27b425-26fd-4f8c-857d-3e5c89fcb0bf",
+      "timestamp": "2026-09-26T18:18:26.670Z",
+      "type": "agent_start"
+    },
+    {
+      "id": "evt-5642a20e-5161-48bc-ae50-29e02e8cec59",
+      "timestamp": "2026-09-26T18:18:26.670Z",
+      "type": "model_call",
+      "provider": "openai",
+      "model": "gpt-4o",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the weather in SF?"
+        }
+      ]
+    },
+    {
+      "id": "evt-111be4db-79c9-459c-b2b8-7b30469b1582",
+      "timestamp": "2026-09-26T18:18:26.670Z",
+      "type": "model_response",
+      "durationMs": 0,
+      "response": "",
+      "tokenUsage": {
+        "input": 10,
+        "output": 20,
+        "total": 30
+      }
+    },
+    {
+      "id": "evt-16083ac8-9a98-4eae-99a7-c79019b5ff87",
+      "timestamp": "2026-09-26T18:18:26.670Z",
+      "type": "tool_call",
+      "tool": "get_weather",
+      "arguments": {
+        "location": "San Francisco"
+      }
+    },
+    {
+      "id": "evt-b89b688c-5615-467d-a26b-08d8780678fe",
+      "timestamp": "2026-09-26T18:18:26.670Z",
+      "type": "tool_result",
+      "tool": "get_weather",
+      "result": {
+        "temperature": 65,
+        "condition": "sunny"
+      }
+    },
+    {
+      "id": "evt-7349514b-b7ac-417a-ae95-03e7ca2624fa",
+      "timestamp": "2026-09-26T18:18:26.670Z",
+      "type": "model_call",
+      "provider": "openai",
+      "model": "gpt-4o",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the weather in SF?"
+        },
+        {
+          "role": "assistant",
+          "content": "null"
+        },
+        {
+          "role": "tool",
+          "content": "{\"temperature\":65,\"condition\":\"sunny\"}"
+        }
+      ]
+    },
+    {
+      "id": "evt-2c8135bf-c312-458f-9e54-7c059938dc1f",
+      "timestamp": "2026-09-26T18:18:26.670Z",
+      "type": "model_response",
+      "durationMs": 0,
+      "response": "The weather in San Francisco is 65F and sunny.",
+      "tokenUsage": {
+        "input": 50,
+        "output": 15,
+        "total": 65
+      }
+    },
+    {
+      "id": "evt-a61c4191-5f7e-4310-92a0-f547ad81aba2",
+      "timestamp": "2026-09-26T18:18:26.670Z",
+      "type": "agent_end",
+      "status": "success"
+    }
+  ],
+  "metadata": {},
+  "tokenUsage": {
+    "input": 60,
+    "output": 35,
+    "total": 95
+  },
+  "model": {
+    "provider": "openai",
+    "name": "gpt-4o"
+  },
+  "result": {
+    "status": "success",
+    "output": "The weather in San Francisco is 65F and sunny."
+  },
+  "durationMs": 2
+}

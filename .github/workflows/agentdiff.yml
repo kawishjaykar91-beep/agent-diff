@@ -1,0 +1,30 @@
+name: AgentDiff Example CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  agent-regression:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18.x
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run Agent Simulation
+      run: npx tsx examples/real-agent/workflow-demo.ts
+      # Note: This workflow runs the offline demo which is expected to exit 1 to show a caught regression.
+      # We allow failure so the workflow completes successfully.
+      continue-on-error: true
+
+    - name: Output JSON Summary (Optional)
+      run: npx agentdiff test .agentdiff/fixtures/baseline.agentrun .agentdiff/runs/latest.agentrun --json > agent-diff-report.json || true

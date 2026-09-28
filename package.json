@@ -1,0 +1,75 @@
+{
+  "name": "agentdiff",
+  "version": "0.1.0",
+  "description": "Structural comparison of AI agent executions. See how two runs actually differed â€” tools called, models used, costs, errors, execution paths â€” not just raw JSON.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "agentdiff": "dist/cli/main.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "demo": "node dist/cli/main.js diff examples/run-a.json examples/run-b.json",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "diff",
+    "debugging",
+    "testing",
+    "execution",
+    "comparison",
+    "llm",
+    "developer-tools"
+  ],
+  "author": "AgentDiff Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agentdiff/agentdiff.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agentdiff/agentdiff/issues"
+  },
+  "homepage": "https://github.com/agentdiff/agentdiff#readme",
+  "files": [
+    "dist",
+    "examples"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
+    "@types/node": "^26.6.3",
+    "@types/uuid": "^10.0.0",
+    "ai": "^7.0.118",
+    "openai": "^7.23.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.2"
+  },
+  "dependencies": {
+    "chalk": "^6.0.0",
+    "commander": "^15.0.0",
+    "uuid": "^14.0.2"
+  },
+  "peerDependenciesMeta": {
+    "openai": {
+      "optional": true
+    },
+    "@anthropic-ai/sdk": {
+      "optional": true
+    },
+    "ai": {
+      "optional": true
+    }
+  }
+}

@@ -1,0 +1,13 @@
+﻿node_modules/
+dist/
+*.tgz
+.DS_Store
+Thumbs.db
+*.log
+.env
+.agentdiff/runs/
+test-install/
+scratch/
+implementation_plan.md
+benchmark.ts
+agentdiff.config.json

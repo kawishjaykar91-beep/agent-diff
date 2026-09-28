@@ -1,0 +1,108 @@
+{
+  "version": "0.1",
+  "runId": "run-a3036dc1-9560-4344-98dc-6e59f1509d56",
+  "timestamp": "2026-09-27T09:03:21.048Z",
+  "agent": {
+    "name": "vercel-e2e-agent",
+    "version": "1.0.0"
+  },
+  "input": "What is the weather in SF?",
+  "events": [
+    {
+      "id": "evt-76dc4288-1d1f-4dda-a7bb-cdfaeb960e5b",
+      "timestamp": "2026-09-27T09:03:21.051Z",
+      "type": "agent_start"
+    },
+    {
+      "id": "evt-d76bd2a4-9686-4d32-9221-ae1eaa706130",
+      "timestamp": "2026-09-27T09:03:21.051Z",
+      "type": "model_call",
+      "provider": "openai",
+      "model": "gpt-4o",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the weather in SF?"
+        }
+      ]
+    },
+    {
+      "id": "evt-0cae3da9-f63c-4a70-ac16-8d0091d15a6e",
+      "timestamp": "2026-09-27T09:03:21.052Z",
+      "type": "model_response",
+      "response": "",
+      "tokenUsage": {
+        "input": 10,
+        "output": 5,
+        "total": 15
+      },
+      "metadata": {
+        "finishReason": "tool-calls"
+      }
+    },
+    {
+      "id": "evt-95862a87-e413-4f32-98ad-48e4c69f49ee",
+      "timestamp": "2026-09-27T09:03:21.052Z",
+      "type": "tool_call",
+      "tool": "get_weather",
+      "arguments": {
+        "city": "San Francisco"
+      }
+    },
+    {
+      "id": "evt-64d41c25-f54b-4e06-a1a7-78285f6a1b2c",
+      "timestamp": "2026-09-27T09:03:21.052Z",
+      "type": "tool_result",
+      "tool": "get_weather",
+      "result": "72°F and sunny"
+    },
+    {
+      "id": "evt-aa0dabbe-52b3-4ac4-a47d-86e26d9e7c87",
+      "timestamp": "2026-09-27T09:03:21.052Z",
+      "type": "model_call",
+      "provider": "openai",
+      "model": "gpt-4o",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the weather in SF?"
+        }
+      ]
+    },
+    {
+      "id": "evt-9b71f6b4-53ac-4ffc-9d7c-ef3649133154",
+      "timestamp": "2026-09-27T09:03:21.052Z",
+      "type": "model_response",
+      "durationMs": 1,
+      "response": "The weather in San Francisco is 72°F and sunny.",
+      "tokenUsage": {
+        "input": 20,
+        "output": 10,
+        "total": 30
+      },
+      "metadata": {
+        "finishReason": "stop"
+      }
+    },
+    {
+      "id": "evt-d4955eb1-8d56-4860-bad7-8ec6541b4787",
+      "timestamp": "2026-09-27T09:03:21.052Z",
+      "type": "agent_end",
+      "status": "incomplete"
+    }
+  ],
+  "metadata": {},
+  "tokenUsage": {
+    "input": 30,
+    "output": 15,
+    "total": 45
+  },
+  "model": {
+    "provider": "openai",
+    "name": "gpt-4o"
+  },
+  "result": {
+    "status": "incomplete"
+  },
+  "durationMs": 4
+}
