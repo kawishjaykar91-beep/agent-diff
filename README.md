@@ -1,6 +1,6 @@
 ﻿# AgentDiff
 
-[![npm version](https://img.shields.io/npm/v/agentdiff.svg)](https://www.npmjs.com/package/agentdiff)
+[![npm version](https://img.shields.io/npm/v/@kawish-jaykar/agentdiff.svg)](https://www.npmjs.com/package/@kawish-jaykar/agentdiff)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 > **Git diff for AI-agent behavior.**
@@ -27,6 +27,12 @@ Tool usage:
 Errors:
   0 -> 1
 ----------------------------
+```
+
+## Installation
+
+```bash
+npm install @kawish-jaykar/agentdiff
 ```
 
 ## Quick Start
@@ -73,7 +79,7 @@ AgentDiff intercepts API calls at the SDK layer. Initialize a recorder and wrap 
 
 **OpenAI:**
 ```typescript
-import { AgentRecorder, wrapOpenAI } from 'agentdiff';
+import { AgentRecorder, wrapOpenAI } from '@kawish-jaykar/agentdiff';
 import { OpenAI } from 'openai';
 
 const recorder = new AgentRecorder({ name: 'my-agent' });
@@ -86,7 +92,7 @@ await recorder.save(); // saves to .agentdiff/runs/<run-id>.agentrun
 
 **Anthropic:**
 ```typescript
-import { AgentRecorder, wrapAnthropic } from 'agentdiff';
+import { AgentRecorder, wrapAnthropic } from '@kawish-jaykar/agentdiff';
 import { Anthropic } from '@anthropic-ai/sdk';
 
 const recorder = new AgentRecorder({ name: 'my-agent' });
@@ -100,7 +106,7 @@ await recorder.save();
 **Vercel AI SDK:**
 ```typescript
 import { generateText } from 'ai';
-import { AgentRecorder, recordGenerateText } from 'agentdiff';
+import { AgentRecorder, recordGenerateText } from '@kawish-jaykar/agentdiff';
 
 const recorder = new AgentRecorder({ name: 'my-agent' });
 

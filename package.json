@@ -1,5 +1,5 @@
 {
-  "name": "agentdiff",
+  "name": "@kawish-jaykar/agentdiff",
   "version": "0.1.0",
   "description": "Structural comparison of AI agent executions. See how two runs actually differed â€” tools called, models used, costs, errors, execution paths â€” not just raw JSON.",
   "type": "module",
@@ -33,12 +33,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agentdiff/agentdiff.git"
+    "url": "git+https://github.com/kawishjaykar91-beep/agent-diff.git"
   },
   "bugs": {
-    "url": "https://github.com/agentdiff/agentdiff/issues"
+    "url": "https://github.com/kawishjaykar91-beep/agent-diff/issues"
   },
-  "homepage": "https://github.com/agentdiff/agentdiff#readme",
+  "homepage": "https://github.com/kawishjaykar91-beep/agent-diff#readme",
   "files": [
     "dist",
     "examples"
